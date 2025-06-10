@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catalogo de filmes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Filmes</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-      <script src="script.js"></script>
+
+  <header>
+    <h1>Catálogo de Filmes</h1>
+    <div class="controls">
+      <input type="text" id="busca" placeholder="Buscar filme..." />
+      <select id="filtroGenero">
+        <option value="">Todos os gêneros</option>
+        <option value="ação">Ação</option>
+        <option value="drama">Drama</option>
+        <option value="comédia">Comédia</option>
+        <option value="terror">Terror</option>
+      </select>
+      <label>
+    <input type="checkbox" id="filtroFavoritos" />
+    Mostrar só favoritos
+  </label>
+    </div>
+  </header>
+
+  <main>
+    <div id="lista-filmes" class="grid-filmes"></div>
+  </main>
+
+<script src="js/script.js"></script>
+<script src="js/localStorage.js"></script>
 </body>
 </html>
